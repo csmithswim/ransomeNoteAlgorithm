@@ -33,19 +33,19 @@ public class Main {
         Integer counter = 0;
 
         for (String notePage : note){
-//            System.out.println(notePage);
+            System.out.println(notePage);
 //            System.out.println(magazineMap);
             if (!magazineMap.containsKey(notePage)){
                 counter = 1;
 //                System.out.println(counter);
                 System.out.println("No");
-                break;
+                continue;
             }
             if (magazineMap.get(notePage) == 0){
                 counter = 1;
 //                System.out.println(counter);
                 System.out.println("No");
-                break;
+                continue;
             }
             magazineMap.replace(notePage, magazineMap.get(notePage) - 1);
         }
